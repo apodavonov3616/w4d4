@@ -75,28 +75,56 @@ describe "#stock_picker" do
     end
 end
 
-describe towers_of_hanoi do
-    let(:player1) { double(:gets => )}
-    allow(player).to receive(:gets).and_return(input)
+describe TowersOfHanoi do
+    let(:player1) { double("player1", :gets => "0 1\n") }
+    # allow(player1).to receive(:gets).and_return("0 1\n")
+
+    describe "#initialize" do 
+        it "creates a new instance of game"
+        it "creates an instance of a player"
+    end
+
+    describe "#play" do 
+        it "calls '#get_move' while player has not won"
+        it "calls '#move'"
+        it "calls '#won?'"
+    end 
 
     describe "#move" do 
-
+        it "checks if the next position is a valid move"
+        it "moves the top piece to the next position"
     end
 
     describe "#get_move" do
-        it "prompts the user to input move"
+        it "prompts the user to input move" do 
+
+        end
+        
         it "should return an array of 2 numbers"
     end 
 
     describe "#won?" do 
-
+        it "returns true if player has won"
+        it "returns false if player has lost"
     end
 
     describe "#valid_move?" do 
-
+        it "checks if the end position is a valid move"
     end 
 end
 
+describe Player do 
+
+    subject(:player) { Player.new }
+    
+    describe "#get_move" do
+        it "prompts the user to input move" do
+            usr_input = double("0 1\n", :chomp=>"")
+        end
+
+        it "should return an array of 2 numbers"
+    end 
+end
 
 
 

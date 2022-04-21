@@ -41,3 +41,11 @@ def stock_picker(array)
     end
     output
 end
+
+class TowersOfHanoi
+    def initialize
+        @grid = 
+    end
+
+    
+end
